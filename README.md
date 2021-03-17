@@ -2,7 +2,7 @@
 
 <h2> Présentation </h2>
 
-Cette application affiche graphiquement en format LCD dans la partie supérieur de la fenêtre les chiffres entrées dans la barre du bas
+Cette application affiche graphiquement en format LCD dans la partie supérieur de la fenêtre les chiffres entrés dans la barre du bas
 
 
 
