@@ -4,12 +4,15 @@
 
 Cette application affiche graphiquement en format LCD dans la partie supérieur de la fenêtre les chiffres entrées dans la barre du bas
 
-L'exécutable compilé est dans le dossier bin/Publish. Tout le dossier Publish est necessaire. 
 
 
-<h2> Compilation </h2>
+<h2> Executable ou Compilation </h2>
 <i>Il s'agit d'une application .Net, donc compilable et executable sous Windows.</i>
 
+L'exécutable compilé est dans le dossier bin/Publish. 
+Tout le dossier Publish est necessaire. 
+
+Pour compiler le projet soi même sans Visual Studio:
 - Telecharger le projet et le décompresser
 
 - Ouvrir l'invite de commande et se placer dans le repertoire de projet (où doit se trouver "Dexyos_TestTech.sln")
