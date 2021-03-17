@@ -4,7 +4,7 @@
     Public Const HAUTEUR = 11
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        For index = 1 To HAUTEUR
+        For i = 1 To HAUTEUR
             MyDataGridView.Rows.Add()
         Next
     End Sub
@@ -23,7 +23,7 @@
 
 
         'Effacement de la précedante ecriture
-        For index = 1 To HAUTEUR - 1
+        For i = 1 To HAUTEUR - 1
             MyDataGridView.Rows.RemoveAt(1)
             MyDataGridView.Rows.Add()
         Next
@@ -42,39 +42,39 @@
     End Sub
 
 
-    Private Sub Dessine(col, barre)
+    Private Sub Dessine(col As Integer, barre As Char)
         Select Case barre
-            Case "A"
+            Case "A"c
                 MyDataGridView.Rows(1).Cells().Item(col + 1).Style.BackColor = Color.Black
                 MyDataGridView.Rows(1).Cells().Item(col + 2).Style.BackColor = Color.Black
                 MyDataGridView.Rows(1).Cells().Item(col + 3).Style.BackColor = Color.Black
 
-            Case "G"
+            Case "G"c
                 MyDataGridView.Rows(5).Cells().Item(col + 1).Style.BackColor = Color.Black
                 MyDataGridView.Rows(5).Cells().Item(col + 2).Style.BackColor = Color.Black
                 MyDataGridView.Rows(5).Cells().Item(col + 3).Style.BackColor = Color.Black
 
-            Case "D"
+            Case "D"c
                 MyDataGridView.Rows(9).Cells().Item(col + 1).Style.BackColor = Color.Black
                 MyDataGridView.Rows(9).Cells().Item(col + 2).Style.BackColor = Color.Black
                 MyDataGridView.Rows(9).Cells().Item(col + 3).Style.BackColor = Color.Black
 
-            Case "B"
+            Case "B"c
                 MyDataGridView.Rows(2).Cells().Item(col + 4).Style.BackColor = Color.Black
                 MyDataGridView.Rows(3).Cells().Item(col + 4).Style.BackColor = Color.Black
                 MyDataGridView.Rows(4).Cells().Item(col + 4).Style.BackColor = Color.Black
 
-            Case "C"
+            Case "C"c
                 MyDataGridView.Rows(6).Cells().Item(col + 4).Style.BackColor = Color.Black
                 MyDataGridView.Rows(7).Cells().Item(col + 4).Style.BackColor = Color.Black
                 MyDataGridView.Rows(8).Cells().Item(col + 4).Style.BackColor = Color.Black
 
-            Case "F"
+            Case "F"c
                 MyDataGridView.Rows(2).Cells().Item(col).Style.BackColor = Color.Black
                 MyDataGridView.Rows(3).Cells().Item(col).Style.BackColor = Color.Black
                 MyDataGridView.Rows(4).Cells().Item(col).Style.BackColor = Color.Black
 
-            Case "E"
+            Case "E"c
                 MyDataGridView.Rows(6).Cells().Item(col).Style.BackColor = Color.Black
                 MyDataGridView.Rows(7).Cells().Item(col).Style.BackColor = Color.Black
                 MyDataGridView.Rows(8).Cells().Item(col).Style.BackColor = Color.Black
@@ -90,18 +90,18 @@
     ' E |_|  C
     '    D
 
-    Function GetBarresLCD(n) As String
+    Function GetBarresLCD(n As Char) As String
         Select Case n
-            Case "0" : Return "ABCDEF"
-            Case "1" : Return "BC"
-            Case "2" : Return "ABGED"
-            Case "3" : Return "ABCDG"
-            Case "4" : Return "FBGC"
-            Case "5" : Return "AFGCD"
-            Case "6" : Return "AFEDCG"
-            Case "7" : Return "ABC"
-            Case "8" : Return "ABCDEFG"
-            Case "9" : Return "ABCDFG"
+            Case "0"c : Return "ABCDEF"
+            Case "1"c : Return "BC"
+            Case "2"c : Return "ABGED"
+            Case "3"c : Return "ABCDG"
+            Case "4"c : Return "FBGC"
+            Case "5"c : Return "AFGCD"
+            Case "6"c : Return "AFEDCG"
+            Case "7"c : Return "ABC"
+            Case "8"c : Return "ABCDEFG"
+            Case "9"c : Return "ABCDFG"
             Case Else : Return ""
         End Select
     End Function
